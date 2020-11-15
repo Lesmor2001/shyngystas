@@ -1,0 +1,31 @@
+@font: "Open Sans";
+.centered_text{
+	text-align: center;
+}
+//variable
+body {
+	font-family: @font, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 34px;
+}
+//mixin
+@media (max-width: 767px) {
+	#contact-form {
+		.centered_text();
+	}
+}
+// functions
+.container-fluid {
+	margin-left: percentage(0.05);
+	margin-right: percentage(0.05);
+}
+//loop
+.margin_top(@count) when (@count > 0) {
+   .margin_top((@count - 60));
+   margin-top: (@count*1px);
+}
+
+.main-menu {
+	.margin_top(60)
+}
